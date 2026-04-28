@@ -1,0 +1,108 @@
+# Butterfly theme configuration
+# Keep this file minimal and prefer configuration over theme source changes.
+
+menu:
+  主页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-heart
+
+avatar:
+  img:
+  effect: false
+
+social:
+
+favicon:
+
+index_img:
+default_top_img:
+archive_img:
+tag_img:
+category_img:
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  position: both
+  default_cover:
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  card_author:
+    enable: true
+    description:
+    button:
+      enable: false
+      icon: fab fa-github
+      text: Follow Me
+      link:
+  card_announcement:
+    enable: false
+    content:
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    orderby: random
+    order: 1
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text:
+  copyright: true
+
+local_search:
+  enable: false
+
+comments:
+  use:
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false
