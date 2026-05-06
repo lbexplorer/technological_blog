@@ -8,8 +8,8 @@ language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
-url: https://lbexplorer.github.io/technical_blog
-root: /technical_blog/
+url: https://lbexplorer.github.io/technological_blog
+root: /technological_blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
