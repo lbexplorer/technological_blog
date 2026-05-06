@@ -1,0 +1,75 @@
+/* Hexo 科技星空风格素材接入示例
+ * 建议放入主题的自定义 CSS 文件，例如 source/css/custom.css 或 themes/<theme>/source/css/_custom.styl
+ * 路径按实际主题调整。
+ */
+
+:root {
+  --primary-color: #38bdf8;
+  --secondary-color: #8b5cf6;
+  --tech-bg: #f5f7fb;
+  --tech-text: #1f2937;
+  --card-radius: 18px;
+}
+
+/* 首页 Hero，类名需要按当前主题实际结构调整 */
+.header,
+.hero,
+#banner,
+.index-cover {
+  background:
+    linear-gradient(rgba(2, 6, 23, .28), rgba(2, 6, 23, .42)),
+    url('/images/bg/hero-starry-tech.webp') center / cover no-repeat !important;
+}
+
+.header h1,
+.hero h1,
+#banner h1,
+.index-cover h1 {
+  color: #fff;
+  text-shadow: 0 0 16px rgba(56, 189, 248, .55), 0 8px 28px rgba(0, 0, 0, .35);
+}
+
+.header .subtitle,
+.hero .subtitle,
+#banner .subtitle,
+.index-cover .subtitle {
+  color: rgba(226, 232, 240, .92);
+}
+
+/* 页面背景 */
+body {
+  background:
+    linear-gradient(rgba(245,247,251,.88), rgba(245,247,251,.92)),
+    url('/images/bg/page-bg-light-tech.svg') center top / cover fixed;
+  color: var(--tech-text);
+}
+
+/* 文章卡片 */
+.post-card,
+.recent-post-item,
+.card,
+.article-card {
+  border-radius: var(--card-radius) !important;
+  border: 1px solid rgba(148, 163, 184, .18);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, .08);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.post-card:hover,
+.recent-post-item:hover,
+.card:hover,
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 52px rgba(15, 23, 42, .13);
+  border-color: rgba(56, 189, 248, .28);
+}
+
+/* 标签胶囊 */
+.tag,
+.post-meta a[href*="tags"],
+.article-tag a {
+  border-radius: 999px;
+  padding: 3px 9px;
+  background: rgba(56, 189, 248, .10);
+  color: #0369a1;
+}

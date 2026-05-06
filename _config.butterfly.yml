@@ -14,9 +14,9 @@ avatar:
 
 social:
 
-favicon:
+favicon: /hexo_blog_tech_assets/favicon.png
 
-index_img:
+index_img: /hexo_blog_tech_assets/hero-starry-tech.webp
 default_top_img:
 archive_img:
 tag_img:
@@ -27,7 +27,15 @@ cover:
   aside_enable: true
   archives_enable: true
   position: both
-  default_cover:
+  default_cover: /hexo_blog_tech_assets/card-tech-cover.svg
+
+subtitle:
+  enable: true
+  effect: false
+  typed_option:
+  source: false
+  sub:
+    - 记录 AI、机器人、软件工程与科研实践
 
 post_meta:
   page:
@@ -51,15 +59,15 @@ aside:
   position: right
   card_author:
     enable: true
-    description:
+    description: AI、机器人、软件工程与科研实践
     button:
       enable: false
       icon: fab fa-github
       text: Follow Me
       link:
   card_announcement:
-    enable: false
-    content:
+    enable: true
+    content: '<div class="tech-tag-cloud"><span>LLM</span><span>Robotics</span><span>ROS</span><span>Hexo</span><span>Software Engineering</span><span>UAV</span><span>Agent</span></div>'
   card_recent_post:
     enable: true
     limit: 5
@@ -106,3 +114,8 @@ comments:
   lazyload: false
   count: false
   card_post_count: false
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/technological_blog/css/custom-tech.css">
+  bottom:

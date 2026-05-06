@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity=".85"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="#0f172a"/>
+  <circle cx="520" cy="80" r="118" fill="url(#g)" opacity=".28"/>
+  <circle cx="555" cy="105" r="76" fill="none" stroke="#ffffff" stroke-opacity=".30"/>
+  <path d="M60 238 H210 L250 198 H420" stroke="#38bdf8" stroke-opacity=".55" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M60 278 H310 L350 238 H582" stroke="#a78bfa" stroke-opacity=".45" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g fill="#e0f2fe" opacity=".85">
+    <circle cx="60" cy="238" r="6"/>
+    <circle cx="210" cy="238" r="5"/>
+    <circle cx="420" cy="198" r="6"/>
+    <circle cx="582" cy="278" r="5"/>
+  </g>
+  <text x="56" y="92" fill="#ffffff" font-size="34" font-family="Arial, sans-serif" font-weight="700">Tech Notes</text>
+  <text x="58" y="132" fill="#cbd5e1" font-size="18" font-family="Arial, sans-serif">AI · Robotics · Software Engineering</text>
+</svg>

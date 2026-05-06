@@ -20,3 +20,5 @@ npx hexo new post "post-title"
 ```
 
 Posts are stored in `source/_posts/`.
+
+Writing conventions are maintained in [docs/blog-writing-guide.md](docs/blog-writing-guide.md).

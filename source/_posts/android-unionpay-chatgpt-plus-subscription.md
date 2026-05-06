@@ -11,140 +11,85 @@ tags:
   - 支付
 ---
 
-这篇文章记录一次通过安卓手机绑定银联卡订阅 ChatGPT Plus 的思路、准备项和排错过程。它更像是一份个人操作笔记，不是支付成功率承诺。实际能否订阅成功，取决于账号所在地区、Google Play 或应用内支付入口、银行卡类型、发卡行风控、网络环境以及 OpenAI 当时开放的支付方式。
+本文总结了通过安卓手机在 Google Play 商店绑定银联卡并订阅 ChatGPT Plus 的实操流程。内容覆盖准备工作、地区与支付信息设置、银联卡绑定、App 重新安装以及最终订阅验证，适合有安卓手机、银联卡和国内手机号的读者参考。
 
-## 前置说明
+## 本文概览
 
-在开始前，先明确几个边界：
+- 检查网络与 Google 服务环境。
+- 在 Google Wallet / Google Play 中添加新加坡支付信息。
+- 绑定银联卡并完成短信验证。
+- 重新安装 ChatGPT 应用并发起订阅。
 
-- 只使用自己的 OpenAI 账号、手机和银行卡。
-- 不使用来路不明的代付、共享账号或低价订阅渠道。
-- 不向任何人提供短信验证码、银行卡密码、支付密码或一次性验证码。
-- 如果页面提示的价格、币种、税费或订阅周期不符合预期，先停止操作。
-- 订阅服务和支付规则可能更新，本文只记录当时可行的检查路径。
+## 适用人群与提醒
+
+- 适合希望从官方渠道订阅 ChatGPT Plus 的国内安卓用户。
+- 成功与否仍取决于账号地区、支付通道、银行卡风控和当时 Google/OpenAI 的策略。
+- 请仅使用自己的账号和银行卡，不要向他人提供验证码。
 
 ## 准备工作
 
-我在操作前先准备了这些内容：
+1. 检查节点的纯净度。打开手机的梯子之后，打开节点检查网站，查看当前节点的纯净度，如果节点纯净度不够就切换其他节点，选择一个纯净节点，最好是新加坡。 https://ping0.cc/
+2. 在安卓手机中，通过设置中搜索 Google，选择 Google 设置，安装 Google 服务。（华为手机的鸿蒙系统没有此功能。）
+<img src="/technological_blog/images/bfd321ea06d4fa942a005a562b1b5e8f_720.jpg" alt="安装 Google 服务" style="max-width:300px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-1. 一台已经安装 ChatGPT 官方应用的安卓手机。
-2. 一个可以正常登录的 OpenAI 账号。
-3. 一张本人名下、状态正常的银联卡。
-4. 可以接收短信验证码的手机号。
-5. 稳定的网络连接。
+下载 Google 服务之后，从应用商店下载 Google Play 商店，然后进入 Google Play 商店登录账号，并下载 GPT（下载时搜索 ChatGPT，有很多其他假冒软件，认准 OpenAI 的下载，大小约 26MB），确保能够在手机上使用 GPT。
+<img src="/technological_blog/images/e72719010323a326e6109ae1d4eada5e.jpg" alt="下载 GPT" style="max-width:300px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-如果走 Google Play 订阅路径，还需要确认这台安卓手机可以正常访问 Google Play，并且已经登录自己的 Google 账号。支付方式通常需要先在 Google Wallet 或 Google Play 的付款方式页面中添加银行卡。本文以银联卡为例，实际操作时可以先从 Google Wallet 的付款方式页面开始检查。
+## 第一步：检查当前谷歌账号是否有绑定地区
 
-银行卡方面，建议提前确认：
+打开安卓手机上的 Google Play 商店，点击右上角的头像，找到下方的设置，进入设置。
+<img src="/technological_blog/images/image.png" alt="进入设置" style="max-width:280px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-- 银行卡是否支持线上支付。
-- 是否开通了境外或跨境支付能力。
-- 单笔和单日限额是否足够。
-- 银行 App 中是否有安全锁、地区锁、无卡支付开关等限制。
-- 如果使用工行卡等银行借记卡或信用卡，建议提前在银行 App 中检查跨境、无卡、快捷支付和限额相关开关。
+点击常规中的账号和设备偏好设置。
+<img src="/technological_blog/images/efd47239dae394146ce774ca6924d7c6.jpg" alt="账号和设备偏好设置" style="max-width:300px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-## 操作流程
+查看当前国家和地区，此处作者已经添加了新加坡的支付信息。正常情况下，如果没有绑定过，此处应为空。
+<img src="/technological_blog/images/image-1.png" alt="国家和地区" style="max-width:280px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-整体流程可以拆成三步：确认订阅入口、绑定支付方式、完成订阅确认。
+接下来的第二步，就是添加一个新加坡的支付信息。
 
-### 1. 打开 ChatGPT 应用
+## 第二步：添加支付信息
 
-登录 ChatGPT 安卓应用后，进入账号或设置页面，找到升级到 ChatGPT Plus 的入口。不同版本的应用入口名称可能不同，常见位置包括：
+本教程以新加坡为例。首先，打开以下网页，找到添加支付信息。
 
-- 侧边栏账号区域
-- 设置页面
-- 模型选择页面附近
-- 订阅或 Upgrade 相关按钮
+https://wallet.google.com/wallet/u/0/home?utm_source=pgc&utm_medium=website&utm_campaign=redirect--
+<img src="/technological_blog/images/image-2.png" alt="添加支付信息" style="max-width:560px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-如果没有看到升级入口，可以先更新 ChatGPT 应用，再重新登录账号检查。
+然后打开地址生成器网站：https://www.meiguodizhi.com/sg-address
 
-### 2. 进入支付确认页面
+随机生成一个新加坡地址，然后将生成的新加坡地址信息填充到 Google Wallet 中。
+<img src="/technological_blog/images/image-3.png" alt="生成地址" style="max-width:340px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-点击升级入口后，应用通常会跳转到系统或应用商店提供的订阅支付页面。这里需要重点检查：
+将所需信息填充到 Google Wallet 中。
+<img src="/technological_blog/images/image-4.png" alt="填充信息" style="max-width:320px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-- 订阅名称是否为 ChatGPT Plus。
-- 订阅周期是否正确。
-- 显示价格和币种是否能接受。
-- 付款账号是否是自己的账号。
-- 是否存在自动续费说明。
+点击提交之后会显示无法绑定，但此时将安卓手机上的 Google Play 商店退出，重新进入设置中，查看当前国家和地区，会发现添加了一个新加坡的支付信息，然后就可以绑定银联卡了。
 
-不要只看按钮文字就直接确认，支付页面上的订阅周期和续费说明更重要。
+## 第三步：绑定工行卡
 
-### 3. 绑定银联卡
+在手机上进入 Google Play 商店，点击头像进入，找到付款与订阅。
+<img src="/technological_blog/images/image-5.png" alt="付款与订阅" style="max-width:280px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-在支付方式管理页面中添加银行卡，按页面要求填写卡号、有效期、姓名、账单信息等字段。不同支付通道要求不完全一致，按页面提示填写即可。
+然后找到支付方式进入，选择添加信用卡或借记卡。
+<img src="/technological_blog/images/c4aa35acf0c108dde2e782a2b4c49d64.jpeg" alt="添加信用卡或借记卡" style="max-width:300px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-如果是 Google Play 订阅路径，可以先进入 Google Wallet 或 Google Play 的付款方式页面添加银联卡，再回到 ChatGPT 应用内发起 Plus 订阅。这样做的好处是可以把“绑卡失败”和“订阅扣款失败”分开排查。
+之后，将银联卡的卡号、有效期、银联卡背面的安全码输入（安全码即银行卡背面白色框中的 3 位数字）。
 
-如果发卡行需要短信验证，确认短信内容来自银行或支付通道，并且交易金额、商户信息与当前订阅操作一致。验证码只填写在官方支付页面中，不通过聊天、邮件或第三方网页发送给任何人。
+然后，需要使用银行卡绑定的手机号接收验证短信，输入短信后绑定成功。
 
-### 4. 完成订阅
+按照步骤输入，绑定成功即可。
 
-支付方式添加成功后，返回订阅确认页，再次核对价格、周期和账号。确认无误后提交订阅。
+## 第四步：订阅 GPT
 
-订阅成功后，可以在 ChatGPT 应用内检查：
+绑定成功之后，想要订阅 GPT，首先需要将之前下载的 GPT 卸载，因为下载 GPT 时会与下载时的 Google Play 商店状态绑定。之前下载 GPT 时还没有更改地区和绑定银联卡，所以需要重新安装。
 
-- 账号是否显示 Plus 状态。
-- 可用模型是否发生变化。
-- 订阅管理页面是否能看到当前订阅。
-- 支付渠道是否能看到自动续费记录。
+重新安装之后，在手机上打开 ChatGPT，使用 Google 账号登录 GPT（与登录 Google 商店的账号一致），点击获取订阅。请注意，如果此时只显示 "Go" 没有显示 "获取 Plus"，那么打开手机的飞行模式，然后关闭后台重新进入 ChatGPT，就能看见 Plus。之后，就可以借助绑定的银联卡来订阅 Plus 了。
+<img src="/technological_blog/images/f0f0e6aa89bdfe54ed51cd812a29a2c5_720.jpg" alt="订阅页面" style="max-width:300px;width:100%;height:auto;display:block;margin:18px auto;" />
 
-## 常见失败原因
+此处展示的是订阅 Pro 的页面，Plus 与之相同，选择支付即可。
 
-如果绑定或扣款失败，可以按下面顺序排查。
+## 结语
 
-### 银行卡侧
+本教程适用于有安卓手机和银联卡、想要直接从官方渠道订阅国外软件的人。通过 Google Play 商店，可以下载大部分国外的 AI，例如 Gemini、Claude 等，都可以用银联卡支付和订阅。订阅之后，如果只想使用一个月，可以从手机或网页版上取消订阅；网页取消不了就从手机上取消。官网渠道相对正规，使用较为稳定，适合有长期需求的人。
 
-- 银行卡没有开通线上支付。
-- 跨境支付被关闭。
-- 银行风控拦截了交易。
-- 单笔或单日限额不足。
-- 卡片状态异常，例如冻结、挂失、过期。
-- 账单信息和银行预留信息不一致。
-
-### 账号和应用侧
-
-- ChatGPT 应用版本过旧。
-- 当前账号暂时没有 Plus 订阅入口。
-- 应用商店账号地区、支付方式和订阅区域不匹配。
-- 支付页面缓存了旧的失败状态。
-- 同一个账号在多个设备或渠道反复尝试，触发风控。
-
-### 网络和设备侧
-
-- 网络不稳定导致支付页加载失败。
-- 系统 WebView 或应用商店组件异常。
-- 手机时间、地区或语言设置异常。
-- 安全软件拦截了支付页面跳转。
-
-## 排错建议
-
-我会优先做这些低风险操作：
-
-1. 更新 ChatGPT 应用和系统 WebView。
-2. 重启手机后重新登录。
-3. 检查银行 App 的线上支付、境外支付和限额设置。
-4. 换一个稳定网络再次尝试。
-5. 等待一段时间再尝试，避免连续失败触发风控。
-6. 联系发卡行确认是否有被拦截的订阅扣款。
-
-如果仍然失败，不建议继续高频尝试。连续失败可能让银行或支付通道进一步收紧风控。
-
-## 安全注意事项
-
-订阅类支付最容易踩的坑不是流程本身，而是账号和资金安全。
-
-- 不购买来路不明的低价 Plus。
-- 不把 OpenAI 账号交给他人登录。
-- 不使用陌生人的银行卡或支付方式。
-- 不在非官方页面输入银行卡信息。
-- 不向任何人提供验证码。
-- 定期检查订阅自动续费状态。
-
-如果只是短期测试 Plus 功能，建议订阅成功后立刻确认取消续费入口在哪里，避免忘记后产生下一期扣费。
-
-## 总结
-
-通过安卓手机绑定银联卡订阅 ChatGPT Plus，关键不在于某一个按钮，而在于三个条件同时满足：账号有可用订阅入口，支付通道接受当前银行卡，发卡行放行这笔订阅交易。
-
-我的建议是先把银行卡权限、限额和风控问题排除干净，再进行订阅操作。每一步都以官方应用和系统支付页面为准，看到异常价格、陌生商户或非预期跳转时立即停止。
+注意：Claude 的订阅审查严格，官网正规充值都有可能会封号，不过可以通过申诉，将钱退回。

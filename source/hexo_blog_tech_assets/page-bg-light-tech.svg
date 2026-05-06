@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="45%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#38bdf8" opacity=".16"/>
+    </pattern>
+    <radialGradient id="r1" cx="16%" cy="18%" r="38%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="r2" cx="83%" cy="24%" r="42%">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#b)"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect width="1920" height="1080" fill="url(#r1)"/>
+  <rect width="1920" height="1080" fill="url(#r2)"/>
+  <g opacity=".18" fill="none" stroke="#2563eb">
+    <path d="M80 860 C352 734 532 782 744 688 S1184 562 1840 640"/>
+    <path d="M100 935 C414 821 618 860 862 742 S1230 653 1816 716" opacity=".5"/>
+  </g>
+</svg>

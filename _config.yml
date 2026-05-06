@@ -77,7 +77,13 @@ pagination_dir: page
 # Include / Exclude file(s)
 include:
 exclude:
+  - hexo_blog_tech_assets.zip
+  - hexo_blog_tech_assets/README.md
+  - hexo_blog_tech_assets/custom-tech-style-example.css
 ignore:
+  - source/hexo_blog_tech_assets.zip
+  - source/hexo_blog_tech_assets/README.md
+  - source/hexo_blog_tech_assets/custom-tech-style-example.css
 
 # Extensions
 theme: butterfly
