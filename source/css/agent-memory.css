@@ -1,0 +1,50 @@
+/* Scoped to one Markdown post; all other Butterfly pages keep their layout. */
+body:has(#agent-memory-guide) { --memory-accent: #3866ad; }
+body:has(#agent-memory-guide) #content-inner { max-width: 1320px; align-items: stretch; }
+body:has(#agent-memory-guide) #post { min-width: 0; padding: 42px 48px; }
+body:has(#agent-memory-guide) #article-container { font-size: 16px; line-height: 1.95; overflow-wrap: anywhere; }
+body:has(#agent-memory-guide) #article-container h2 { margin-top: 48px; padding-bottom: 10px; border-bottom: 1px solid var(--tech-border); font-size: 26px; scroll-margin-top: 85px; }
+body:has(#agent-memory-guide) #article-container h3 { margin-top: 32px; font-size: 21px; scroll-margin-top: 85px; }
+body:has(#agent-memory-guide) .post-title { font-size: clamp(26px, 2.7vw, 36px); line-height: 1.5; }
+body:has(#agent-memory-guide) #article-container a:focus-visible { outline: 2px solid var(--memory-accent); outline-offset: 4px; }
+.memory-intro { margin: 26px 0 30px; padding: 24px 28px; border: 1px solid #cadbf0; border-left: 4px solid #3866ad; border-radius: 8px; background: #f0f5fb; color: #243d5c; }
+.memory-kicker { font-size: 11px; letter-spacing: 2px; font-weight: 700; color: #3866ad; }
+#article-container .memory-intro p { margin: 12px 0 18px; }
+.memory-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.memory-meta span { background: #fff; border: 1px solid #d9e3f0; border-radius: 4px; padding: 2px 8px; font-size: 11px; }
+#article-container .memory-figure { margin: 28px 0; padding: 16px; border: 1px solid var(--tech-border); border-radius: 10px; background: #fff; }
+#article-container .memory-figure img { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
+#article-container .memory-figure figcaption { margin: 12px 4px 2px; font-size: 12px; line-height: 1.7; color: #5c6c81; text-align: center; }
+.memory-paper-meta { color: #637a98; font-size: 13px; padding-bottom: 8px; }
+.memory-mobile-toc { display: none; }
+@media (min-width: 901px) {
+  body:has(#agent-memory-guide) #content-inner { display: flex; flex-direction: row; gap: 28px; }
+  body:has(#agent-memory-guide) #post { order: 2; width: calc(100% - 298px); }
+  body:has(#agent-memory-guide) #aside-content { order: 1; width: 270px; padding: 0; display: block; }
+  body:has(#agent-memory-guide) #aside-content > .card-widget,
+  body:has(#agent-memory-guide) #aside-content .sticky_layout > :not(#card-toc) { display: none; }
+  body:has(#agent-memory-guide) #aside-content .sticky_layout { position: sticky; top: 80px; }
+  body:has(#agent-memory-guide) #card-toc { margin: 0; padding: 22px 16px; border-radius: 10px; box-shadow: none; }
+  body:has(#agent-memory-guide) #card-toc:hover { transform: none; }
+  body:has(#agent-memory-guide) #card-toc .toc-content { max-height: calc(100vh - 180px); overflow-y: auto; font-size: 13px; }
+  body:has(#agent-memory-guide) #card-toc .toc-child { display: block; }
+  body:has(#agent-memory-guide) #card-toc .toc-link { padding: 5px 8px; border-radius: 4px; }
+  body:has(#agent-memory-guide) #card-toc .toc-link.active { background: #3866ad; color: white; }
+  body:has(#agent-memory-guide) #hide-aside-btn { display: none; }
+}
+@media (max-width: 900px) {
+  body:has(#agent-memory-guide) #post { width: 100%; padding: 26px 22px; }
+  body:has(#agent-memory-guide) #article-container { font-size: 15px; }
+  body:has(#agent-memory-guide) #article-container h2 { font-size: 23px; }
+  .memory-intro { padding: 18px; }
+  #article-container .memory-figure { padding: 8px; }
+  .memory-mobile-toc { display: block; margin: 24px 0; padding: 12px 16px; border: 1px solid var(--tech-border); border-radius: 8px; }
+  .memory-mobile-toc summary { cursor: pointer; font-weight: 600; }
+  .memory-mobile-toc nav { max-height: 55vh; overflow-y: auto; padding-top: 12px; }
+  .memory-mobile-toc a { display: block; padding: 6px 0; font-size: 13px; }
+  .memory-mobile-toc .memory-subheading { padding-left: 14px; }
+}
+[data-theme="dark"] .memory-intro { background: #1b293c; border-color: #3f5b81; color: #d5e2f4; }
+[data-theme="dark"] .memory-kicker { color: #aacbff; }
+[data-theme="dark"] .memory-meta span { background: #23354b; border-color: #47617c; }
+[data-theme="dark"] .memory-paper-meta { color: #aac0dc; }

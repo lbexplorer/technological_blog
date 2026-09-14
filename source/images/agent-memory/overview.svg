@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">Agent Memory：从交互到可复用记忆</title><desc id="desc">当前任务进入工作上下文，智能体读取持久记忆并行动；交互结果经过筛选更新后回到记忆库。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#6383ac" stroke-width="1.8"/></marker></defs>
+<rect width="960" height="440" rx="14" fill="#f5f8fc"/>
+<g font-family="Segoe UI,Microsoft YaHei,sans-serif"><text x="42" y="46" font-size="13" letter-spacing="3" fill="#52729d">AGENT MEMORY / THE BIG PICTURE</text>
+<text x="42" y="85" font-size="28" font-weight="600" fill="#203652">让过去的经历，进入下一次决策。</text>
+<g fill="none" stroke="#6383ac" stroke-width="2" marker-end="url(#arrow)"><path d="M230 194H289"/><path d="M540 194H599"/><path d="M728 239V300H540"/><path d="M410 300V245"/></g>
+<rect x="42" y="143" width="188" height="101" rx="10" fill="#e7eef8" stroke="#ccd9ea"/><text x="70" y="181" font-size="20" fill="#203652">当前任务</text><text x="70" y="213" font-size="15" fill="#5c718d">问题 · 观察 · 工具结果</text>
+<rect x="291" y="132" width="249" height="113" rx="10" fill="#3866ad"/><text x="319" y="176" font-size="22" fill="#fff">工作上下文</text><text x="319" y="210" font-size="15" fill="#e3edff">当前输入 + 选中的记忆</text>
+<rect x="602" y="143" width="308" height="101" rx="10" fill="#e7eef8" stroke="#ccd9ea"/><text x="630" y="181" font-size="20" fill="#203652">智能体推理与行动</text><text x="630" y="213" font-size="15" fill="#5c718d">生成回答 · 执行工具 · 获取反馈</text>
+<rect x="290" y="285" width="250" height="95" rx="10" fill="#e5f1ec" stroke="#c1d8cb"/><text x="318" y="322" font-size="20" fill="#2b6550">持久记忆</text><text x="318" y="352" font-size="15" fill="#4e7665">经历 · 事实 · 可复用经验</text>
+<text x="557" y="329" font-size="15" fill="#52729d">筛选、提取、更新后写入</text><text x="235" y="274" font-size="13" fill="#52729d">按需读取</text>
+<text x="42" y="414" font-size="12" fill="#6d7e93">概念示意 · 记忆库中的信息只有进入当前上下文，才能直接用于本次生成。</text></g></svg>

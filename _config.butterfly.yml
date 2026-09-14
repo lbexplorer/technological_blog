@@ -3,6 +3,7 @@
 
 menu:
   主页: / || fas fa-home
+  Agent Memory: /agent-memory/ || fas fa-brain
   归档: /archives/ || fas fa-archive
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
@@ -118,4 +119,6 @@ comments:
 inject:
   head:
     - <link rel="stylesheet" href="/technological_blog/css/custom-tech.css">
+    - <link rel="stylesheet" href="/technological_blog/css/agent-memory.css">
   bottom:
+    - <script src="/technological_blog/js/agent-memory.js" defer></script>
